@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Virtual Card</title>
+
+		<meta
+			name="description"
+			content="A website you can use to create a virtual card for something to email them a personalized link."
+		/>
+		<meta
+			name="keywords"
+			content="Virtual Card, Card, HoleInOneStudios, HoleInOneGolfer"
+		/>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+
+	<body onload="load()">
+		<form onsubmit="submitForm(event)" method="post">
+			<label for="form_sender">Sender:</label>
+			<input id="form_sender" name="sender" type="text" />
+
+			<label for="form_reciever">Recipiant:</label>
+			<input id="form_reciever" name="reciever" type="text" />
+
+			<label for="form_occasion">Occasion:</label>
+			<input id="form_occasion" name="occasion" type="text" />
+
+			<label for="form_message">Message:</label>
+			<input id="form_message" name="message" type="text" />
+
+			<label for="form_color">Color:</label>
+			<input id="form_color" name="color" type="color" />
+
+			<input type="submit" type="Submit" />
+		</form>
+
+		<div>
+			<h1>
+				Happy <span id="occasion">{occasion}</span> to
+				<span id="reciever">{reciever}</span> from
+				<span id="sender">{sender}</span>!
+			</h1>
+			<h2><span id="message">{message}</span></h2>
+		</div>
+	</body>
+</html>
